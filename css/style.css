@@ -1,0 +1,591 @@
+/* appling google font over the website  */
+html, body{
+    overflow-x: hidden;
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+/* styling menu icon */
+.nav-menu{
+    border: none;
+    background-color: #fff;
+    font-size: 1.5rem;
+    color: #fca61f;
+}
+/* styling navbar links  */
+.navbar-nav a{
+    color: black;
+    position: relative;
+}
+.navbar-nav a:hover{
+    color: #fca61f;
+}
+.navbar-nav a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    top: 35px;
+    position: absolute;
+    background: #fca61f;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+.navbar-nav a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+  /* styling contact btn  */
+.c-btn{
+    border: none;
+    background: #fca61f;
+    color: #fff;
+    font-size: 1.2rem;
+}
+/* styling home section starts */
+.home{
+    background: #fbfbf9;
+    background-image: url("../images/noshkain_agriculture.jpg");
+    background-size: 100% auto; /* make image span full width, keep aspect ratio */
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 30px 0 10px 0;
+    min-height: 100vh; 
+    z-index: 0;/* keep full image visible by matching viewport height */
+}
+.home h2{
+    font-size: 3rem;
+    line-height: 4rem;
+}
+.c-orange{
+    color: #000000;
+    font-weight: 700;
+    font-size: 4rem;
+}
+.home p{
+    width: fit-content;
+    margin-top: 1rem;
+    font-size: 2.2rem;
+    z-index: 1;
+}
+.h-btn:hover{
+    background: #1e4a3a;
+    color: #fff;
+    transform: translateY(-20px);
+    transition-duration: 1s;
+}
+.link{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fca61f;
+    position: relative;
+}
+.link::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    top: 20px;
+    background-color: #1e4a3a;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.link:hover{
+    color: #1e4a3a;
+}
+.link:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* adding animation to home section image  */
+.home img{
+    animation: floatimg 4s ease-in-out infinite;
+}
+
+@keyframes floatimg {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-24px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/* expertise section starts */
+.heading small{
+    color: #000000;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+.heading h3{
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3f396d;
+    /* background: linear-gradient(to bottom, #a8e063, #24533a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+.expertise h4{
+    color: #3f396d;
+    font-weight: 700;
+}
+.expertise a{
+    text-decoration: none;
+    color: #fca61f;
+}
+.expertise a:hover{
+    color: #1e4a3a;
+}
+.expertise .service-card{
+    text-align: center;
+    padding: 15px 15px;
+    border-radius: 0.7rem;
+}
+
+/* skill section starts */
+.skill{
+    background-color: rgb(234, 234, 249);
+}
+.progress-card{
+    padding: 12% 10% 10% 15%;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10%;
+}
+.progress-card:hover{
+    transform: scale(1.1,1.1);
+    transition-duration: 0.6s;
+}
+.circular-progress{
+    position: relative;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    background: conic-gradient(#7d2ae8 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circular-progress::before{
+    content: "";
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.progress-value{
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.html-progress{
+    color: #fca61f;
+}
+.javascript-progress{
+    color: #1e4a3a;
+}
+.php-progress{
+    color: #20c997;
+}
+.reactjs-progress{
+    color: #3f396d;
+}
+.text{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.heading p{
+    font-size: 1.3rem;
+}
+
+/* portfolio section starts */
+#myBtnContainer{
+    margin-bottom: 45px;
+}
+#myBtnContainer button{
+  border: none;
+  color: black;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;   
+  display: inline-block;
+  margin: 0 25px;
+}
+#myBtnContainer button:hover{
+    color: #fca61f;
+}
+
+#myBtnContainer button:focus{
+    outline: none;
+}
+.post .content h4{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.post .card{
+    border: none;
+}
+
+/* testimonial section starts */
+.testimonial img:hover{
+    transform: scale(1.2,1.2);
+    transition-duration: 1s;
+}
+.testimonial h4{
+    color: #3f396d;
+}
+.testimonial i{
+    font-size: 2.9rem;
+    color: #fca61f;
+    
+}
+.testimonial .nextprev-btn{
+    border: none;
+    background-color: #fff;
+}
+.prev:hover,.prev-btn:hover{
+    color:#1e4a3a;
+    transform: translateX(-10px);
+    transition-duration: 1s;
+}
+.next:hover,.next-btn:hover{
+    color:#1e4a3a;
+    transform: translateX(10px);
+    transition-duration: 1s;
+}
+
+/* blog section starts */
+.blog{
+        background-color: #fbfbf9;
+}
+.blog .blogpost .card{
+    border: none;
+    border-radius: 5%;
+}
+/* Uniform card images (products / blog / portfolio) */
+.card .card-img-top, .blog .card-img-top, .portfolio .card-img-top, .post .card-img-top, .blogpost .card-img-top {
+        width: 100%;
+        height: 260px !important;
+        object-fit: cover !important;
+        display: block;
+}
+@media (max-width: 767px) {
+    .card .card-img-top, .blog .card-img-top, .portfolio .card-img-top, .post .card-img-top, .blogpost .card-img-top {
+        height: 180px !important;
+    }
+}
+.nav-bg{
+    background-color: #fff;
+}
+
+.blog .blogpost small{
+    color: #2b2b2b;
+    font-size: 1.1rem;
+}
+.blog .blogpost h4,.blogpost a{
+    color: #000000;
+    font-weight: 700;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+.blog .blogpost .read-more-btn{
+    text-decoration: none;
+    color: #2b2b2b;
+    font-size: 1.1rem;
+}
+.blog .blogpost .read-more-btn:hover{
+    color: #1e4a3a;
+}
+/* styling modal group */
+.modal .modal-content{ position: relative; }
+.btn-c{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #fca61f;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+.btn-c i{
+    color: #fff;
+    font-size: 1.2rem;
+}
+@media (max-width: 767px){
+    .btn-c{ top: 8px; right: 8px; width:36px; height:36px; font-size:1rem; }
+}
+.modal-body .content span{
+    font-size: 1rem;
+}
+.modal-body .content small{
+    font-size: 1rem;
+    color: #1e4a3a;
+}
+/* contact section starts */
+.contact{
+    background-color: #f3f3f3;
+}
+.contact-details i{
+    font-size: 1.5rem;
+    color: #2b2b2b;
+}
+.contact-details p{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+.contact-form .form-control:focus{
+    box-shadow: none;
+    border: 1px solid #fca61f;
+}
+.contact-form .form-control{
+    padding: 10px 10px;
+    width: 80%;
+}
+
+/* footer section starts */
+footer{
+    background-color: #211e39;
+}
+
+footer .link-group a{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+footer .link-group a:hover{
+    color: #fca61f;
+}
+.social-links button{
+    border: none;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    background-color: #fff;
+    padding: 14px 15px 10px 15px;
+}
+.social-links .dribble{
+    color: #f33a7e;
+}
+.social-links button:hover{
+    color: #fff;
+    transform: translateY(-20px);
+    transition-duration: 1s;
+}
+.social-links .dribble:hover{
+    background-color: #f33a7e;
+}
+.social-links .whatsapp{
+    color: #25D366;
+}
+.social-links .whatsapp:hover{
+    background-color: #25D366;
+}
+.social-links .behance{
+    color: #255afc;
+}
+.social-links .behance:hover{
+    background-color: #255afc;
+}
+
+/* styling back to top button */
+#btn-back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    font-size: 1.4rem;
+    background-color: #3ca248;
+    color: #fff;
+    animation: pulse 3s infinite;
+}
+
+/* Certification/logo sizing: make certification logos uniform and centered */
+.expertise .service-card .img{
+        height: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+.expertise .service-card .img img{
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        display: block;
+}
+
+@media (max-width: 767px) {
+    .expertise .service-card .img{
+        height: 90px;
+    }
+}
+
+/* About-us images inside progress cards: make four boxes filled by images */
+.progress-card.about{
+        padding: 0; /* remove inner padding so image fills card */
+        overflow: hidden;
+}
+.progress-card.about img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+}
+.progress-card.about{height: 220px;} /* match visual size of original cards */
+@media (max-width: 767px){
+    .progress-card.about{height: 160px;}
+}
+
+/* New SAGOS image grid - Bootstrap responsive layout */
+.sagos-image-grid{
+        width: 100%;
+}
+.sagos-image-card{
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 250px;
+        background-color: #f8f9fa;
+        border-radius: 12px;
+}
+.sagos-image-card img{
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        display: block;
+}
+
+@media (max-width: 767px){
+    .sagos-image-card{
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px){
+    .sagos-image-card{
+        height: 180px;
+    }
+}
+
+/* Mobile / small-screen fixes */
+@media (max-width: 767px) {
+    html, body { font-size: 16px; }
+
+    /* make hero shorter on small screens and ensure image fills width */
+    .home{
+        min-height: 55vh; /* reduce height so content fits above the fold */
+        background-size: cover; /* cover works better on narrow viewports */
+        background-position: center top;
+        padding: 60px 0 40px 0;
+    }
+
+    .home h2{
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    .c-orange{
+        font-size: 2.2rem;
+    }
+
+    .home p{
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem auto 1rem auto;
+    }
+
+    .c-btn.h-btn{
+        padding: 0.7rem 1.6rem;
+        font-size: 1rem;
+        display: inline-block;
+        margin: 0.8rem auto 0 auto;
+    }
+
+    /* reduce navbar/logo size so it doesn't push content down */
+    .navbar .container-fluid{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .navbar-brand img{ height: 36px !important; }
+
+    /* reduce spacing for nav items on mobile */
+    .navbar-nav{ gap: 0.75rem; }
+
+    /* ensure images/cards don't overflow */
+    img{ max-width: 100%; height: auto; }
+
+}
+
+/* Modal images: make the image at the top of every modal the same size */
+.modal .modal-body .img{
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal .modal-body .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+@media (max-width: 767px){
+    .modal .modal-body .img{ height: 160px; }
+}
+
+.forest-gradient {
+  background: linear-gradient(to bottom, #a8e063, #24533a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.dark-green{
+    color: #1e4a3a;
+}
+.green-text-gradient {
+  /* The gradient colors */
+  background: linear-gradient(to right, #90EE90, #006400);
+  
+  /* Use the background to color the text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* Make the actual text transparent so the background shows through */
+  -webkit-text-fill-color: transparent;
+  color: transparent; 
+  
+  font-weight: bold; /* Gradients look much better on bold text */
+  font-size: 2rem;
+}
